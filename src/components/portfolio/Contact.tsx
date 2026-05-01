@@ -28,7 +28,7 @@ export const Contact = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
@@ -41,14 +41,45 @@ export const Contact = () => {
     }
     setErrors({});
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out — I'll get back to you soon.",
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "49900322-c3c5-4e4d-9dde-ac1fef24f05a",
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
       });
-      setForm({ name: "", email: "", message: "" });
-    }, 800);
+      const data = await response.json();
+
+      if (data.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out — I'll get back to you soon.",
+        });
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Error sending message",
+          description: data.message || "Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Network error occurred. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
