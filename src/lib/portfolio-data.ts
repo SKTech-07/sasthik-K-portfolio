@@ -62,7 +62,7 @@ export const PROJECTS = [
       "Scales for concurrent users",
     ],
     demo: "#",
-    github: "#",
+    github: "https://github.com/SKTech-07/Chat-Room-Application",
   },
   {
     title: "Trainer Attendance Tracking System",
@@ -76,7 +76,7 @@ export const PROJECTS = [
       "Reduces manual effort, improves accuracy",
     ],
     demo: "#",
-    github: "#",
+    github: "https://github.com/SKTech-07/Trainer-Attendance-Tracking-System",
   },
 ];
 
@@ -102,9 +102,9 @@ export const SERVICES = [
 ];
 
 export const CONTACT = {
-  email: "sasthik.k@example.com",
-  phone: "+91 98765 43210",
-  linkedin: "https://linkedin.com/in/sasthik-k",
-  github: "https://github.com/sasthik-k",
-  instagram: "https://instagram.com/sasthik.k",
+  email: "sasthikkrishnamoorthy@gmail.com",
+  phone: "+919360085631",
+  linkedin: "https://linkedin.com/in/sasthik-k-49545632a/",
+  github: "https://github.com/SKTech-07",
+  instagram: "https://instagram.com/sasthikk/",
 };

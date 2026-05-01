@@ -37,9 +37,6 @@ export const Services = () => {
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {s.description}
                   </p>
-                  <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-smooth">
-                    Learn more <ArrowRight className="h-4 w-4" />
-                  </div>
                 </div>
               </div>
             );

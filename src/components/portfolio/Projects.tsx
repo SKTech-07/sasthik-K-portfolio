@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "./SectionHeader";
 import { PROJECTS } from "@/lib/portfolio-data";
@@ -65,11 +65,6 @@ export const Projects = () => {
                 </div>
 
                 <div className="flex gap-2">
-                  <Button variant="hero" size="sm" asChild>
-                    <a href={p.demo} target="_blank" rel="noreferrer">
-                      <ExternalLink /> View Demo
-                    </a>
-                  </Button>
                   <Button variant="outline" size="sm" asChild>
                     <a href={p.github} target="_blank" rel="noreferrer">
                       <Github /> GitHub

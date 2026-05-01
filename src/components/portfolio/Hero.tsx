@@ -1,6 +1,5 @@
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profile from "@/assets/profile.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import { useEffect, useState } from "react";
 import { CONTACT } from "@/lib/portfolio-data";
@@ -99,7 +98,7 @@ export const Hero = () => {
               <Mail /> Contact Me
             </Button>
             <Button variant="ghost" size="lg" asChild>
-              <a href="#" download>
+              <a href="/Sasthik_K-Resume.pdf" download="Sasthik_K-Resume.pdf">
                 <Download /> Resume
               </a>
             </Button>
@@ -136,11 +135,11 @@ export const Hero = () => {
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-1.5 bg-gradient-primary shadow-elegant animate-float">
               <div className="w-full h-full rounded-full overflow-hidden bg-card">
                 <img
-                  src={profile}
+                  src="/photo.png"
                   alt="Sasthik K — Full Stack Developer"
                   width={768}
                   height={768}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>

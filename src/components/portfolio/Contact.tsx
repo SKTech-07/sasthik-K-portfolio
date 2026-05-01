@@ -18,9 +18,9 @@ const schema = z.object({
 const INFO = [
   { icon: Mail, label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
   { icon: Phone, label: "Phone", value: CONTACT.phone, href: `tel:${CONTACT.phone.replace(/\s/g, "")}` },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sasthik-k", href: CONTACT.linkedin },
-  { icon: Github, label: "GitHub", value: "github.com/sasthik-k", href: CONTACT.github },
-  { icon: Instagram, label: "Instagram", value: "@sasthik.k", href: CONTACT.instagram },
+  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sasthik-k-49545632a/", href: CONTACT.linkedin },
+  { icon: Github, label: "GitHub", value: "github.com/SKTech-07", href: CONTACT.github },
+  { icon: Instagram, label: "Instagram", value: "instagram.com/sasthikk/", href: CONTACT.instagram },
 ];
 
 export const Contact = () => {
