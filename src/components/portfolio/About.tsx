@@ -36,7 +36,7 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
             <p>
-              I'm <span className="text-foreground font-semibold">Sasthik K</span>,
+              I'm <span className="text-foreground font-semibold">Sasthik Krishnamoorthy</span>,
               a passionate Full Stack Developer who loves turning ideas into
               real, functional, and beautiful products. My focus is on
               high-performance and user-centric web applications.
