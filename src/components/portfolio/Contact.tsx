@@ -43,31 +43,37 @@ export const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "49900322-c3c5-4e4d-9dde-ac1fef24f05a",
-          name: form.name,
-          email: form.email,
-          message: form.message,
+          service_id: "service_dsn5cu4",
+          template_id: "template_8b23fzq",
+          user_id: "ZgwbWw6L5RFMJ69om",
+          template_params: {
+            name: form.name,
+            from_name: form.name,
+            email: form.email,
+            reply_to: form.email,
+            message: form.message,
+          },
         }),
       });
-      const data = await response.json();
 
-      if (data.success) {
+      if (response.ok) {
         toast({
           title: "Message sent!",
           description: "Thanks for reaching out — I'll get back to you soon.",
         });
         setForm({ name: "", email: "", message: "" });
       } else {
+        const errorText = await response.text();
         toast({
           title: "Error sending message",
-          description: data.message || "Something went wrong. Please try again later.",
+          description: errorText || "Something went wrong. Please try again later.",
           variant: "destructive",
         });
       }
