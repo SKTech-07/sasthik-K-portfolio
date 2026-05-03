@@ -68,7 +68,7 @@ export const PROJECTS = [
     title: "Trainer Attendance Tracking System",
     description:
       "A web-based attendance management system with structured data storage, smart reporting, and an organized database that minimizes manual effort.",
-    tags: ["MERN", "Express", "MongoDB"],
+    tags: ["Spring Boot", "MySQL"],
     features: [
       "Web-based attendance management",
       "Data storage and reporting features",
